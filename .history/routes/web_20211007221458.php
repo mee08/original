@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +17,5 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('top');
-})->name("top");
-
-//リダイレクト系ルート
-Route::get("/thankyou", [App\Http\Controllers\RidirectController::class, 'thankyou'])->name('thankyou');
+});
+Auth::routes();

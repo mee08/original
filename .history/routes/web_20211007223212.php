@@ -18,7 +18,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('top');
-})->name("top");
+});
 
 //リダイレクト系ルート
-Route::get("/thankyou", [App\Http\Controllers\RidirectController::class, 'thankyou'])->name('thankyou');
+Route::get("/")
